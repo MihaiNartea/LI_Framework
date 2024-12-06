@@ -1,70 +1,152 @@
-<<<<<<< HEAD
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# LUCRUL INDIVIDUAL FRAMEWORK
 
-## About Laravel
+## Autorii proiectului
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+-  Nartea Mihai
+-  Victor Veste
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+----------
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Descrierea proiectului
 
-## Learning Laravel
+Acest proiect reprezintă o aplicație web pentru gestionarea postărilor de blog, creată cu **Laravel**. Aplicația oferă funcționalități de gestionare a postărilor și categoriilor de blog și include un **admin panel** pentru administrarea conținutului. Adminii pot crea, edita, vizualiza și șterge postări și categorii. Aplicația este construită folosind **FilamentPHP** pentru a crea o interfață administrativă ușor de utilizat. De asemenea, proiectul respectă arhitectura **MVC (Model-View-Controller)**, fiind modular și ușor de extins.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+----------
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Funcții principale:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+-   **Admin Panel**: Utilizarea **FilamentPHP** pentru crearea unui panou de administrare ușor de utilizat pentru gestionarea postărilor și categoriilor.
+-   **CRUD pentru postări și categorii**: Posibilitatea de a crea, citi, edita și șterge postări și categorii.
+-   **Filtrare după categorii**: Afișarea postărilor dintr-o anumită categorie.
+-   **Paginare**: Afișarea postărilor cu câte 10 pe pagină.
+-   **Protecție CSRF**: Securitate împotriva atacurilor Cross-Site Request Forgery.
+-   **Interfață Bootstrap simplă și intuitivă**: Design responsive, ușor de utilizat pe toate dispozitivele.
 
-## Laravel Sponsors
+----------
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Instrucțiuni de instalare și pornire
 
-### Premium Partners
+Pentru a rula aplicația local, urmați pașii de mai jos:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### 1. **Clonați proiectul**
 
-## Contributing
+Descărcați codul sursă utilizând comanda:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+`git clone https://github.com/MihaiNartea/LI_Framework.git` 
 
-## Code of Conduct
+### 2. **Instalați dependențele**
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Navigați în directorul proiectului și instalați dependențele necesare:
 
-## Security Vulnerabilities
+`cd proiectul-tau
+composer install
+npm install` 
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 3. **Configurați fișierul `.env`**
 
-## License
+Copiați fișierul `.env.example` în `.env` și configurați conexiunea la baza de date:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
-# Test
->>>>>>> f9ac9265fa4117d0a7468a5f3d1eed60b541c2ab
+`cp .env.example .env` 
+
+### 4. **Generează cheia aplicației**
+
+Rulați comanda:
+
+`php artisan key:generate` 
+
+### 5. **Rulați migrațiile**
+
+Creați tabelele necesare în baza de date:
+
+`php artisan migrate` 
+
+### 6. **Instalarea și configurarea FilamentPHP**
+
+FilamentPHP este utilizat pentru a construi interfața administrativă. Instalați Filament cu:
+
+`composer require filament/filament` 
+
+Pentru a crea un utilizator admin în Filament, puteți folosi comanda:
+
+`php artisan make:filament-user` 
+
+Această comandă va crea un utilizator care poate avea acces la panoul de administrare al Filament.
+
+### 7. **Porniți serverul**
+
+Lansați serverul local:
+
+`npm run dev`
+`php artisan serve` 
+
+----------
+
+## Exemple de utilizare
+
+### **Admin Panel**
+
+-   **Acces Admin**: Accesați `/admin` pentru a vizualiza panoul de administrare.
+-   Adminii pot gestiona postările și categoriile prin interfața Filament, care oferă formulare ușor de utilizat pentru adăugarea, editarea și ștergerea postărilor și categoriilor.
+
+### **Crearea unei postări**
+
+1.  Autentificați-vă în panoul de administrare.
+2.  Navigați la secțiunea **Postări** din admin panel.
+3.  Adăugați un titlu, descriere și selectați o categorie.
+4.  Salvați postarea pentru a o publica.
+
+### **Vizualizarea postărilor**
+
+-   Accesați pagina `/posts`  pentru a vizualiza toate postările publicate.
+-   Filtrați postările pe categorii pentru a vizualiza doar postările dintr-o anumită categorie. 
+
+### **Editarea postărilor**
+
+1.  Navigați la postarea dorită din admin panel.
+2.  Editați titlul, descrierea sau categoria și salvați modificările.
+
+### **Ștergerea postărilor**
+
+1.  În panoul de administrare, accesați postarea dorită.
+2.  Apăsați pe butonul **Delete** pentru a șterge postarea.
+
+----------
+
+## Funcționalități suplimentare
+
+### **Navbar cu categorii**
+
+-   Afișează toate categoriile disponibile.
+-   Permite filtrarea postărilor pe baza categoriei selectate.
+
+### **Pagină individuală pentru postări**
+
+-   Fiecare postare are o pagină proprie unde se afișează:
+    -   Titlul,
+    -   Descrierea completă,
+    -   Categoria,
+    -   Data publicării (dacă este disponibilă).
+
+----------
+
+## Lista surselor utilizate
+
+-   [Laravel Documentation](https://laravel.com/docs/10.x)
+-   [FilamentPHP](https://filamentphp.com/)
+-   [Bootstrap](https://getbootstrap.com/)
+
+----------
+
+## Alte aspecte semnificative
+
+-   **Paginare avansată**: Implementată cu `paginate(10)` din Eloquent.
+-   **Validare a datelor**: Toate formularele sunt validate pentru a preveni introducerea de date incorecte.
+-   **Securitate**: Protecție împotriva atacurilor CSRF și SQL Injection.
+-   **Design responsive**: Utilizarea Bootstrap garantează o afișare optimă pe orice dispozitiv.
+
+----------
+
+### Observații
+
+Acest proiect este ideal pentru a fi utilizat ca platformă de blog simplă, cu un admin panel construit cu FilamentPHP, ce permite gestionarea ușoară a postărilor și categoriilor. Proiectul poate fi extins cu ușurință pentru a adăuga noi funcționalități pe măsură ce necesitățile evoluează.

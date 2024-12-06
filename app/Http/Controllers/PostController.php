@@ -21,4 +21,14 @@ class PostController extends Controller
     public function show(Post $post) {
         return view('posts.show', compact('post'));
     }
+
+    public function filterByCategory(Category $category)
+{
+    $posts = $category->posts()->paginate(10);
+
+    $categories = Category::all();
+
+    return view('posts.index', compact('posts', 'categories', 'category'));
+}
+
 }

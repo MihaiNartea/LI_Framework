@@ -20,7 +20,7 @@
             <ul class="navbar-nav d-flex flex-wrap">
                 @foreach ($categories as $category)
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href={{ route('posts.home') }}>{{ $category->name }}</a>
+                    <a class="nav-link active" aria-current="page" href={{ route('categories.filter', $category->id) }}>{{ $category->name }}</a>
                 </li>
                 @endforeach
             </ul>
